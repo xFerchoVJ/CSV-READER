@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto de Melanie Iveth Cerrillos Mora</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="text-center">
+    <div class="container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="d-flex justify-content-between align-items-center bottom">
+        <h1>Melanie Mora</h1>
+        <div>
+          <p class="m-0 pr-4">Ing. Sistemas Computacionales</p>
+          <p class="m-0">Mineria de Datos</p>
+        </div>
+      </header>
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Proyecto para mineria de datos</h1>
+        <p class="lead">CSV Reader.</p>
+        <p class="lead">
+          <a href="#section" class="btn btn-lg btn-secondary">Ingresa tu CSV</a>
+        </p>
+      </main>
+    </div>
+    <div class="container form border p-3 rounded" id="section">
+      <h2 class="mb-3">Aqui puedes ingresar tu CSV</h2>
+      <p>Al ingresar tu CSV podrás obtener una tabla con los respectivos campos y valores que tenga tu archivo CSV</p>
+      <p>Además de obtener graficas de los datos que se encuentran en tu CSV</p>
+      <small class="small">La aplicación tarda en responder dependiendo del tamaño de tu archivo</small>
+
+      <form class="mt-4">
+        <div class="form-group">
+          <label for="csvFile">Ingresa el archivo CSV:</label>
+          <input type="file" class="form-control-file" id="csvFile" accept=".csv">
+        </div>
+        <button type="submit" class="btn btn-primary">Generar DataTable y Graficas</button>
+      </form>
+      <div class="d-none" id="afterForm">
+        <button class="btn btn-danger mt-4" onclick="location.reload()">Borrar y probar nuevo</button>
+        <h2>Data Table</h2>
+        <table id="dataTable" class="table table-dark table-bordered table-striped">
+        </table>
+        <h2>Charts</h2>
+        <canvas id="chart1"></canvas>
+        <hr>
+        <canvas id="chart2"></canvas>
+        <hr>
+        <canvas id="chart3"></canvas>
+        <hr>
+        <canvas id="chart4"></canvas>
+        <hr>
+        <canvas id="chart5"></canvas>
+        <hr>
+        <canvas id="chart6"></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
+
